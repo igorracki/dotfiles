@@ -1,11 +1,13 @@
 #!/bin/bash
 
-dir_path="$(pwd)/config"
+dir_path="$(pwd)/core"
 declare -a configs=(
+".config/bat"
 ".iterm2"
 ".ideavimrc"
 ".tmux.conf"
 ".zprofile"
+".zshrc"
 )
 
 echo "List of defined configurations:"
@@ -28,3 +30,4 @@ do
 	ln -s $file ~/$config
 	echo -e "\t[$config] installed."
 done
+echo ""
