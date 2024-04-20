@@ -1,13 +1,5 @@
 # ~/.*
 
-## Installation
-
-Install configuration files for `bash` or `zsh` by running:
-
-```bash
-$SHELL install.sh
-```
-
 ## Bat
 
 ### List `bat` Themes
