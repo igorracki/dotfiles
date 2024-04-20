@@ -3,6 +3,7 @@
 dir_path="$(pwd)/core"
 declare -a configs=(
 ".config/bat"
+".config/nmvn"
 ".iterm2"
 ".ideavimrc"
 ".tmux.conf"

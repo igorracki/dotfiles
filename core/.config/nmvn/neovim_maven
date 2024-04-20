@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -z "$JV" ]]; then
+	version="11"
+else
+	version="$JV"
+fi
+
+export JAVA_HOME=/opt/homebrew/opt/openjdk@$version
+
+mvn -V "$@"
