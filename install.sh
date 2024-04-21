@@ -6,6 +6,7 @@ declare -a configs=(
 ".config/nmvn"
 ".iterm2"
 ".ideavimrc"
+".p10k.zsh"
 ".tmux.conf"
 ".zprofile"
 ".zshrc"
