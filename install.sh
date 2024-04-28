@@ -1,6 +1,8 @@
 #!/bin/bash
 
-dir_path="$(pwd)/core"
+main_dir="$(pwd)"
+dir_path="$main_dir/core"
+optional_path="$main_dir/optional"
 declare -a configs=(
 ".config/bat"
 ".config/nmvn"
@@ -10,6 +12,10 @@ declare -a configs=(
 ".tmux.conf"
 ".zprofile"
 ".zshrc"
+)
+
+declare -a optional=(
+".aliases"
 )
 
 echo "List of defined configurations:"
@@ -33,3 +39,17 @@ do
 	echo -e "\t[$config] installed."
 done
 echo ""
+
+for config in "${optional[@]}"
+do
+	echo "Optional config: [$config]"
+	if [ -d ~/$config ] || [ -f ~/$config ] || [ -L ~/$config ]; then
+		echo -e "\t[$config] exists already, skipping (check for diff manually)"
+	else
+		file="$optional_path/$config"
+		cp -R $file ~/
+		echo -e "\t[$config] installed."
+	fi
+done
+echo ""
+
