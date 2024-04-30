@@ -1,6 +1,47 @@
 alias ll='eza --color=always --long --git --icons=always --all --total-size'
 alias l='eza --color=always --long --git --icons=always --all'
 alias vim='nvim'
-alias notes='cd /Users/igor/Notes && nvim .'
 alias cat='bat'
 
+export WIN=/mnt/c/Users/eracigo/
+export MAVEN_HOME=/opt/apache-maven-3.5.3
+export M2=$MAVEN_HOME/bin
+export PATH=$PATH:$M2
+export BAT_THEME="DarkNeon"
+export PATH="$PATH:/home/eracigo/.config/nmvn"
+export EDITOR=nvim
+
+alias m11="neovim_maven"
+alias usejava11='export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/'
+alias usejava8='export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/'
+alias usejava17='export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/'
+alias usejava21='export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/'
+alias java8='/usr/lib/jvm/java-8-openjdk-amd64/bin/java'
+alias java11='/usr/lib/jvm/java-11-openjdk-amd64/bin/java'
+alias java17='/usr/lib/jvm/java-17-openjdk-amd64/bin/java'
+alias build_quick='mvn clean install -DskipTests -Dpmd.skip=true -Dcheckstyle.skip=true'
+alias cddps='usejava8 && cd /home/eracigo/git/data-persistence-service'
+alias cdneo4j='usejava11 && cd /home/eracigo/git/neo4j'
+alias cdtools='usejava11 && cd /home/eracigo/git/dps-tools'
+alias cdbench='cd /home/eracigo/git/eric-enm-cniv-dps-benchmark'
+alias cdapi='usejava8 && cd /home/eracigo/git/data-persistence-service-api'
+alias cdwin='cd /mnt/c/Users/eracigo'
+alias startneo='docker-compose -f /home/eracigo/git/data-persistence-service/docker-compose-neo4j4.yml pull && docker-compose -f /home/eracigo/git/data-persistence-service/docker-compose-neo4j4.yml up --force-recreate'
+alias gerritpush='git push origin HEAD:refs/for/master'
+alias jeelogs='code ~/git/data-persistence-service/testsuite/integration/jee/target/jboss-eap-6.4.18.1/standalone/log/server.log'
+alias install_extension='sudo cp ~/git/neo4j/neo4j-java-driver/transport/transport-bolt-extension/target/neo4j-java-driver-transport-bolt-extension-*-shaded.jar ~/git/data-persistence-service/docker/neo4j/extension/'
+alias uninstall_extension='sudo rm -f ~/git/data-persistence-service/docker/neo4j/extension/neo4j-java-driver-transport-bolt-extension-*-SNAPSHOT-shaded.jar'
+alias cddesktop='cd /mnt/c/Users/eracigo/OneDrive\ -\ Ericsson/Desktop/'
+alias uplimits='sudo su eracigo --shell /bin/bash'
+alias bob='/home/eracigo/git/bob/bob'
+alias vim='usejava21 && nvim'
+alias vimdps='nvim /home/eracigo/git/data-persistence-service'
+alias vimneo4j='nvim /home/eracigo/git/neo4j'
+alias vimtools='nvim /home/eracigo/git/dps-tools'
+alias vimbench='nvim /home/eracigo/git/eric-enm-cniv-dps-benchmark'
+alias vimapi='nvim /home/eracigo/git/data-persistence-service-api'
+alias cdonedrive='cd /mnt/c/Users/eracigo/OneDrive\ -\ Ericsson'
+alias cdnotes='cd /mnt/c/Users/eracigo/Notes'
+alias notes='cdnotes && vim .'
+alias sync='~/workspace/dir_cloner/dir_cloner'
+alias slimfat='eval "$(oh-my-posh --init --shell bash --config /home/linuxbrew/.linuxbrew/opt/oh-my-posh/themes/slimfat.omp.json)"'
