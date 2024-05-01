@@ -7,7 +7,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Setup history tracking
+HISTSIZE=10000
+SAVEHIST=12000
+HISTFILE=~/.cache/zsh/history
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+if [ ! -d $(dirname $HISTFILE) ]; then
+    echo "$(dirname $HISTFILE)/ directory does not exist. Creating it now..."
+    mkdir -p $(dirname $HISTFILE)
+fi
+
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 [[ ! -f ~/.aliases ]] || source ~/.aliases
 [[ ! -f ~/.aliases_work ]] || source ~/.aliases_work
