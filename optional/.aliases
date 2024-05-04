@@ -4,8 +4,6 @@ alias vim='nvim'
 alias cat='bat'
 
 export BAT_THEME="DarkNeon"
-export PATH="$PATH:/home/eracigo/.config/nmvn"
 export EDITOR=nvim
 
-alias m11="neovim_maven"
 alias slimfat='eval "$(oh-my-posh --init --shell bash --config /home/linuxbrew/.linuxbrew/opt/oh-my-posh/themes/slimfat.omp.json)"'
