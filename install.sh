@@ -5,6 +5,7 @@ dir_path="$main_dir/core"
 optional_path="$main_dir/optional"
 declare -a configs=(
 ".config/bat"
+".config/nmvn"
 ".p10k.zsh"
 ".tmux.conf"
 ".zprofile"
