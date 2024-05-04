@@ -21,6 +21,15 @@ do
 	echo -e "\t$config"
 done
 
+if [[ "${configs[@]} =~ '.tmux.conf'" ]]; then
+	if [[ ! -d ~/.tmux/plugins/tpm ]]; then
+		echo "Installing tmux-plugin-manager..."
+		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+		echo "TPM installed!"
+	fi
+fi
+
+
 echo ""
 for config in "${configs[@]}"
 do	
