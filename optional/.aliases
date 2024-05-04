@@ -3,12 +3,14 @@ alias l='eza --color=always --long --git --icons=always --all'
 alias vim='nvim'
 alias cat='bat'
 
+user_dir="$(echo ~)"
+
 export WIN=/mnt/c/Users/eracigo/
 export MAVEN_HOME=/opt/apache-maven-3.5.3
 export M2=$MAVEN_HOME/bin
 export PATH=$PATH:$M2
 export BAT_THEME="DarkNeon"
-export PATH="$PATH:/home/eracigo/.config/nmvn"
+export PATH="$PATH:$user_dir/.config/nmvn"
 export EDITOR=nvim
 
 alias m11="neovim_maven"
