@@ -7,7 +7,7 @@
 
 ## Flavors
 
-- [master](https://github.com/igorracki/dotfiles)
+- => [master](https://github.com/igorracki/dotfiles)
   - Initial ZSH configuration for any environment
 - [mac](https://github.com/igorracki/dotfiles/tree/mac)
   - ZSH configuration for MacOS
