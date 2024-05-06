@@ -4,6 +4,7 @@ main_dir="$(pwd)"
 dir_path="$main_dir/core"
 optional_path="$main_dir/optional"
 declare -a configs=(
+".config/alacritty"
 ".config/bat"
 ".p10k.zsh"
 ".tmux.conf"
