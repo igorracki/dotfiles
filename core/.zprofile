@@ -5,3 +5,5 @@ user_dir="$(echo ~)"
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/
 export PATH="$PATH:/opt/homebrew/bin/mvn"
 export PATH="$PATH:$user_dir/.config/nmvn"
+export GOPATH="~/go"
+export PATH="$PATH:$GOPATH/bin"
