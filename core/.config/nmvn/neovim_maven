@@ -6,6 +6,6 @@ else
 	version="$JV"
 fi
 
-export JAVA_HOME=/opt/homebrew/opt/openjdk@$version
+export JAVA_HOME=/usr/lib/jvm/java-$version-openjdk-amd64
 
 mvn -V "$@"
