@@ -6,6 +6,10 @@ else
 	version="$JV"
 fi
 
-export JAVA_HOME=/opt/homebrew/opt/openjdk@$version
+if [[ $version == "8" ]]; then
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-$version.jdk/Contents/Home
+else
+	export JAVA_HOME=/opt/homebrew/opt/openjdk@$version/
+fi
 
 mvn -V "$@"

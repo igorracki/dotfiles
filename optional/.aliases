@@ -1,11 +1,12 @@
 alias ll='eza --color=always --long --git --icons=always --all --total-size'
 alias l='eza --color=always --long --git --icons=always --all'
-alias vim='nvim'
 alias cat='bat'
 
 export BAT_THEME="DarkNeon"
 export PATH="$PATH:/home/eracigo/.config/nmvn"
 export EDITOR=nvim
 
-alias m11="neovim_maven"
-alias slimfat='eval "$(oh-my-posh --init --shell bash --config /home/linuxbrew/.linuxbrew/opt/oh-my-posh/themes/slimfat.omp.json)"'
+alias java8='export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"'
+alias java11='export JAVA_HOME="/opt/homebrew/opt/openjdk@11"'
+alias java21='export JAVA_HOME="/opt/homebrew/opt/openjdk@21"'
+alias vim='java21 && nvim'
