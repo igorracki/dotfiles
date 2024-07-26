@@ -5,8 +5,10 @@ alias cat='bat'
 export BAT_THEME="DarkNeon"
 export PATH="$PATH:/home/eracigo/.config/nmvn"
 export EDITOR=nvim
+export JDK11=/opt/homebrew/opt/openjdk@11
 
 alias java8='export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"'
 alias java11='export JAVA_HOME="/opt/homebrew/opt/openjdk@11"'
+alias java17='export JAVA_HOME="/opt/homebrew/opt/openjdk@17"'
 alias java21='export JAVA_HOME="/opt/homebrew/opt/openjdk@21"'
 alias vim='java21 && nvim'
