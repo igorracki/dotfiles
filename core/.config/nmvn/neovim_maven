@@ -12,4 +12,4 @@ else
 	export JAVA_HOME=/opt/homebrew/opt/openjdk@$version/
 fi
 
-mvn -V "$@"
+mvn -V "$@" -Djol.skipHotspotSAAttach=true
