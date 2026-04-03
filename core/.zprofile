@@ -7,4 +7,6 @@ export PATH="$PATH:/opt/apache-maven-3.5.3/bin"
 export PATH="$PATH:$user_dir/.config/nmvn"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:/opt/homebrew/opt/gnu-tar/libexec/gnubin"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools

@@ -17,6 +17,9 @@ blur = true
 
 #option_as_alt = "Both"
 
+[colors.primary]
+background = '#000000'
+
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
 

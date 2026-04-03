@@ -472,6 +472,16 @@
     # in this case.
     (( VCS_STATUS_HAS_UNSTAGED == -1 )) && res+=" ${modified}─"
 
+    if (( $1 && VCS_STATUS_NUM_UNSTAGED )); then
+      local shortstat
+      shortstat=$(git diff --shortstat 2>/dev/null)
+      if [[ -n $shortstat ]]; then
+        # Parse insertions and deletions: "X insertions(+), Y deletions(-)"
+        [[ $shortstat =~ "([0-9]+) insertion" ]] && res+=" ${clean}+${match[1]}"
+        [[ $shortstat =~ "([0-9]+) deletion"  ]] && res+=" ${conflicted}-${match[1]}"
+      fi
+    fi
+
     typeset -g my_git_format=$res
   }
   functions -M my_git_formatter 2>/dev/null
